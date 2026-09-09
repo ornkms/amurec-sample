@@ -2178,3 +2178,368 @@ NEWS MOBILE
     }
 
 }
+
+/* =====================================================
+   NEON HERO REFRESH
+   添付のダーツマシーン画像を活かしたダーク × ネオン仕様
+===================================================== */
+
+/* HEADER: heroの上に溶け込む透明ナビ */
+.neon-theme .header {
+    background: linear-gradient(
+        180deg,
+        rgba(2, 5, 12, .88) 0%,
+        rgba(2, 5, 12, .55) 72%,
+        rgba(2, 5, 12, 0) 100%
+    );
+    border-bottom: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.neon-theme .header-inner {
+    width: min(1400px, calc(100% - 72px));
+    height: 88px;
+}
+
+.neon-theme .logo img {
+    height: 54px;
+    filter: brightness(0) invert(1);
+}
+
+.neon-theme .nav {
+    gap: 38px;
+}
+
+.neon-theme .nav a {
+    color: rgba(255, 255, 255, .9);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: .12em;
+}
+
+.neon-theme .nav a:hover {
+    color: #a9c8ff;
+}
+
+.neon-theme .nav a:not(.nav-contact)::after {
+    background: linear-gradient(90deg, #6fc8ff, #7c6cff);
+}
+
+.neon-theme .nav-contact {
+    min-width: 142px;
+    padding: 12px 24px;
+    background: rgba(4, 9, 19, .18);
+    border: 1px solid rgba(255, 255, 255, .72);
+    color: #fff !important;
+    text-align: center;
+    box-shadow: inset 0 0 0 1px rgba(106, 155, 255, .08);
+}
+
+.neon-theme .nav-contact:hover {
+    background: rgba(255, 255, 255, .12);
+    border-color: #8fc8ff;
+    color: #fff !important;
+    box-shadow: 0 0 28px rgba(50, 103, 255, .18);
+}
+
+/* HERO */
+.neon-theme .hero {
+    min-height: 100svh;
+    background: #02050b;
+    isolation: isolate;
+}
+
+.neon-theme .hero-bg {
+    inset: 0;
+    background-color: #02050b;
+    background-image: url("../images/hero-neon.PNG");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    transform: none;
+}
+
+.neon-theme .hero-overlay {
+    background:
+        radial-gradient(circle at 70% 50%, rgba(24, 71, 195, .08), transparent 34%),
+        linear-gradient(
+            90deg,
+            rgba(0, 2, 7, .99) 0%,
+            rgba(0, 3, 9, .96) 24%,
+            rgba(0, 4, 12, .86) 43%,
+            rgba(0, 4, 12, .36) 64%,
+            rgba(0, 3, 9, .10) 100%
+        );
+}
+
+.neon-theme .hero::after {
+    display: none;
+}
+
+.neon-theme .hero-inner {
+    width: min(1400px, calc(100% - 120px));
+    padding-top: 118px;
+}
+
+.neon-theme .hero-label {
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, .88);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .32em;
+    text-shadow: 0 0 18px rgba(71, 123, 255, .25);
+}
+
+.neon-theme .hero h1 {
+    max-width: 760px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: clamp(45px, 5.5vw, 78px);
+    font-weight: 600;
+    line-height: 1.28;
+    letter-spacing: -.045em;
+    text-shadow: 0 6px 30px rgba(0, 0, 0, .38);
+}
+
+.neon-theme .hero h1 span {
+    color: #fff;
+    -webkit-text-stroke: 0;
+}
+
+.neon-theme .hero-text {
+    margin-bottom: 38px;
+    color: rgba(255, 255, 255, .77);
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: .02em;
+}
+
+.neon-theme .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.neon-theme .button {
+    min-width: 192px;
+    min-height: 58px;
+    padding: 15px 24px;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, .66);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .16);
+}
+
+.neon-theme .button-primary {
+    background: linear-gradient(135deg, #79b59a, #5b9478);
+    border-color: transparent;
+    color: #fff;
+}
+
+.neon-theme .button-primary:hover {
+    background: linear-gradient(135deg, #8dc8ad, #69a889);
+    color: #fff;
+    box-shadow: 0 14px 36px rgba(88, 158, 122, .20);
+}
+
+.neon-theme .button-outline,
+.neon-theme .button-instagram {
+    background: rgba(1, 5, 13, .34);
+    border-color: rgba(255, 255, 255, .62);
+    color: #fff;
+}
+
+.neon-theme .button-outline:hover,
+.neon-theme .button-instagram:hover {
+    background: rgba(255, 255, 255, .10);
+    border-color: #83b7ff;
+    color: #fff;
+    box-shadow: 0 0 32px rgba(49, 93, 255, .18);
+    transform: translateY(-3px);
+}
+
+.neon-theme .button-arrow {
+    margin-left: auto;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1;
+    opacity: .9;
+    transform: translateY(-1px);
+}
+
+.neon-theme .instagram-mark {
+    position: relative;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+}
+
+.neon-theme .instagram-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    content: "";
+    transform: translate(-50%, -50%);
+}
+
+.neon-theme .instagram-mark::after {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 3px;
+    height: 3px;
+    background: currentColor;
+    border-radius: 50%;
+    content: "";
+}
+
+.neon-theme .hero-scroll {
+    right: auto;
+    bottom: 42px;
+    left: max(36px, calc((100vw - 1400px) / 2 + 20px));
+    gap: 15px;
+    transform: none;
+    transform-origin: initial;
+}
+
+.neon-theme .hero-scroll span {
+    color: rgba(255, 255, 255, .78);
+    font-size: 9px;
+    letter-spacing: .25em;
+}
+
+.neon-theme .hero-scroll div {
+    width: 72px;
+    background: linear-gradient(90deg, rgba(255,255,255,.7), rgba(91,132,255,.25));
+}
+
+/* hero直後のNEWSを少しシャープにして、暗→明の切り替えをきれいに */
+.neon-theme .news {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 -22px 60px rgba(0, 0, 0, .12);
+}
+
+@media (max-width: 1100px) {
+    .neon-theme .hero-bg {
+        background-position: 72% center;
+    }
+
+    .neon-theme .hero-inner {
+        width: min(100% - 64px, 1180px);
+    }
+
+    .neon-theme .hero h1 {
+        max-width: 650px;
+        font-size: clamp(44px, 6.4vw, 68px);
+    }
+}
+
+@media (max-width: 768px) {
+    .neon-theme .header {
+        background: linear-gradient(180deg, rgba(2,5,12,.90), rgba(2,5,12,.45));
+    }
+
+    .neon-theme .header-inner {
+        width: calc(100% - 30px);
+        height: 68px;
+    }
+
+    .neon-theme .logo img {
+        height: 40px;
+    }
+
+    .neon-theme .nav-contact {
+        min-width: 0;
+        padding: 9px 16px;
+    }
+
+    .neon-theme .hero {
+        min-height: 760px;
+    }
+
+    .neon-theme .hero-bg {
+        background-position: 63% center;
+        background-size: cover;
+    }
+
+    .neon-theme .hero-overlay {
+        background:
+            linear-gradient(180deg, rgba(0,3,9,.35) 0%, rgba(0,3,9,.56) 42%, rgba(0,3,9,.94) 100%),
+            linear-gradient(90deg, rgba(0,3,9,.84) 0%, rgba(0,3,9,.28) 100%);
+    }
+
+    .neon-theme .hero-inner {
+        align-self: flex-end;
+        width: calc(100% - 32px);
+        margin-bottom: 54px;
+        padding-top: 120px;
+    }
+
+    .neon-theme .hero-label {
+        max-width: 100%;
+        margin-bottom: 17px;
+        font-size: 8px;
+        letter-spacing: .22em;
+    }
+
+    .neon-theme .hero h1 {
+        max-width: 100%;
+        margin-bottom: 20px;
+        font-size: clamp(39px, 11vw, 56px);
+        line-height: 1.26;
+    }
+
+    .neon-theme .hero-text {
+        margin-bottom: 26px;
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .neon-theme .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .neon-theme .button {
+        width: 100%;
+        min-width: 0;
+        min-height: 52px;
+        padding: 12px 16px;
+        font-size: 11px;
+    }
+
+    .neon-theme .button-instagram {
+        grid-column: 1 / -1;
+    }
+
+    .neon-theme .hero-scroll {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .neon-theme .hero-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .neon-theme .button-instagram {
+        grid-column: auto;
+    }
+}
+
